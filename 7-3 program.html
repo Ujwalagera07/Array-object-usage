@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html><body>
+<h3>Array Object Demo</h3>
+<button onclick="showArray()">Show Array Methods</button>
+<pre id="out"></pre>
+
+<script>
+let marks = [85, 92, 78, 95, 88];
+
+function showArray() {
+    let res = '';
+    
+    // Properties
+    res += 'Length: ' + marks.length + '\n';
+    
+    // Methods
+    res += '\nArray: ' + marks + '\n';
+    res += 'Join: ' + marks.join(', ') + '\n';
+    res += 'First: ' + marks[0] + '\n';
+    res += 'Last: ' + marks.pop() + ' (popped)\n';
+    res += 'Now: ' + marks + '\n';
+    res += 'IndexOf 92: ' + marks.indexOf(92) + '\n';
+    res += 'Slice(1,3): ' + marks.slice(1,3) + '\n';
+    res += 'Reverse: ' + marks.reverse() + '\n';
+    
+    document.getElementById('out').textContent = res;
+}
+</script>
+</body></html>
